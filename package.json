@@ -1,0 +1,15 @@
+{
+  "name": "quickbite",
+  "version": "1.0.0",
+  "description": "QuickBite - Skip the Canteen Queue",
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "start": "node server/index.js",
+    "seed": "node server/seed.js",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client"
+  },
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
